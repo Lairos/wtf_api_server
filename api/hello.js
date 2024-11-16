@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
+const handler = async (req, res) => {
   try {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
@@ -11,4 +11,6 @@ module.exports = async (req, res) => {
       error: '伺服器錯誤' 
     });
   }
-}; 
+};
+
+module.exports = handler; 
