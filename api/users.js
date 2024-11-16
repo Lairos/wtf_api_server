@@ -11,7 +11,13 @@ module.exports = async (req, res) => {
     return res.status(200).json(users);
   } catch (error) {
     return res.status(500).json({ 
-      error: '伺服器錯誤' 
+      error: {
+        code: 'internal_error',
+        message: '伺服器錯誤',
+        details: error.message,
+        timestamp: new Date().toISOString(),
+        requestId: `REQ${Date.now()}`
+      }
     });
   }
 }; 
