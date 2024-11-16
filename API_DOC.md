@@ -15,7 +15,7 @@ https://wtfapiserver-swvnram53-james-projects-d8e99eb1.vercel.app
 **Query Parameters:**
 | 參數 | 類型 | 必填 | 描述 |
 |------|------|------|------|
-| senderAddress | string | 是 | 發送方錢包地址 |
+| senderAddress | string | 是 | 發送���錢包地址 |
 | recipientAddress | string | 是 | 接收方錢包地址 |
 | amount | number | 是 | 轉帳金額 |
 | tokenSymbol | string | 是 | 代幣符號 (例如: "USDT", "ETH") |
@@ -190,7 +190,8 @@ https://wtfapiserver-swvnram53-james-projects-d8e99eb1.vercel.app
   "senderAddress": "0x1234...",
   "recipientAddress": "0xabcd...",
   "amount": 100,
-  "tokenSymbol": "USDT"
+  "tokenSymbol": "USDT",
+  "action": "create_transfer"
 }
 ```
 
