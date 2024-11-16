@@ -8,7 +8,13 @@
   },
   "routes": [
     {
+      "src": "/api/transfer/(.*)",
+      "methods": ["GET"],
+      "dest": "/api/transfer/$1.js"
+    },
+    {
       "src": "/api/(.*)",
+      "methods": ["GET"],
       "dest": "/api/$1.js"
     }
   ],
