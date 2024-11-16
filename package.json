@@ -1,0 +1,13 @@
+{
+  "name": "vercel-api-demo",
+  "version": "1.0.0",
+  "description": "Vercel API Demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.0.0"
+  }
+} 
