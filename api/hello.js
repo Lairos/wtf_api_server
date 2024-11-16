@@ -1,5 +1,9 @@
-const handler = async (req, res) => {
+module.exports = async (req, res) => {
   try {
+    if (req.method !== 'GET') {
+      return res.status(405).json({ error: 'Method not allowed' });
+    }
+
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
     
@@ -17,6 +21,4 @@ const handler = async (req, res) => {
       }
     });
   }
-};
-
-module.exports = handler; 
+}; 
