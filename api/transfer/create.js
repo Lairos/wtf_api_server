@@ -45,6 +45,7 @@ module.exports = async (req, res) => {
       status: 'created',
       createdAt: new Date().toISOString(),
       expiresAt: new Date(Date.now() + 3600000).toISOString(),
+      action: 'create_transfer',
       details: {
         senderAddress,
         recipientAddress,

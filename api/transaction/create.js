@@ -39,7 +39,8 @@ module.exports = async (req, res) => {
       senderAddress: senderAddress || 'default_sender_address',
       recipientAddress,
       amount: Number(amount),
-      tokenSymbol
+      tokenSymbol,
+      action: 'create_transfer'
     };
 
     res.status(200).json(transaction);
