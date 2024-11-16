@@ -9,12 +9,22 @@
   "routes": [
     {
       "src": "/api/transfer/(.*)",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+      },
       "dest": "/api/transfer/$1.js"
     },
     {
       "src": "/api/(.*)",
-      "methods": ["GET"],
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+      },
       "dest": "/api/$1.js"
     }
   ],
