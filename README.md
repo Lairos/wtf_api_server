@@ -23,6 +23,10 @@ https://wtfapiserver-swvnram53-james-projects-d8e99eb1.vercel.app
 - GET /api/transfer/confirm
   - 參數: transferId, executionId
 
+### Transaction APIs
+- GET /api/transaction/create
+  - 參數: recipientAddress, amount, tokenSymbol, senderAddress?
+
 ### 其他 APIs
 - GET /api/hello
 - GET /api/users
